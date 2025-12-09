@@ -11,7 +11,7 @@ COPY server/package*.json ./server/
 # Install dependencies
 RUN npm install
 RUN cd client && npm install
-RUN cd ../server && npm install
+RUN cd server && npm install
 
 # Copy source code
 COPY client ./client
