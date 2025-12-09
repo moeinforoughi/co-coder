@@ -1,4 +1,6 @@
 # Co-Coder ⚡
+<img width="1917" height="940" alt="Screenshot 2025-12-09 142055" src="https://github.com/user-attachments/assets/d545519a-7eaa-48f0-ac3a-3070eb328307" />
+
 
 [![CI/CD](https://github.com/yourusername/co-coder/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/yourusername/co-coder/actions/workflows/ci-cd.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
