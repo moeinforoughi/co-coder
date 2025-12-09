@@ -322,10 +322,13 @@ select:focus {
 .logo::before {
   content: '<CO-CODER/>';
   position: absolute;
+  top: 0;
   left: 0;
   color: var(--cyber-neon-pink);
-  opacity: 0.7;
+  -webkit-text-fill-color: var(--cyber-neon-pink);
+  opacity: 0.2;
   animation: glitch 3s infinite reverse;
+  z-index: -1;
 }
 
 /* Editor Layout */
@@ -551,17 +554,25 @@ select:focus {
 .home-title::before {
   content: 'CO-CODER';
   position: absolute;
+  top: 0;
   left: 2px;
   text-shadow: -2px 0 var(--cyber-neon-pink);
+  -webkit-text-fill-color: var(--cyber-neon-pink);
+  opacity: 0.3;
   animation: glitch 2s infinite reverse;
+  z-index: -1;
 }
 
 .home-title::after {
   content: 'CO-CODER';
   position: absolute;
+  top: 0;
   left: -2px;
   text-shadow: 2px 0 var(--cyber-neon-cyan);
+  -webkit-text-fill-color: var(--cyber-neon-cyan);
+  opacity: 0.3;
   animation: glitch 3s infinite;
+  z-index: -2;
 }
 
 .home-subtitle {
