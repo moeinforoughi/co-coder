@@ -1,0 +1,80 @@
+version: '3.8'
+
+services:
+  # Full-stack application (combines frontend + backend)
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: co-coder
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    restart: unless-stopped
+    networks:
+      - co-coder-network
+
+  # Development mode (separate services for hot reload)
+  # Uncomment to use development mode with hot reload
+  
+  # server:
+  #   build:
+  #     context: ./server
+  #     dockerfile: Dockerfile.dev
+  #   container_name: co-coder-server
+  #   ports:
+  #     - "3000:3000"
+  #   volumes:
+  #     - ./server:/app
+  #     - /app/node_modules
+  #   environment:
+  #     - NODE_ENV=development
+  #     - PORT=3000
+  #     - CLIENT_URL=http://localhost:5173
+  #   networks:
+  #     - co-coder-network
+  #   command: npm run dev
+
+  # client:
+  #   build:
+  #     context: ./client
+  #     dockerfile: Dockerfile.dev
+  #   container_name: co-coder-client
+  #   ports:
+  #     - "5173:5173"
+  #   volumes:
+  #     - ./client:/app
+  #     - /app/node_modules
+  #   environment:
+  #     - NODE_ENV=development
+  #   networks:
+  #     - co-coder-network
+  #   command: npm run dev
+  #   depends_on:
+  #     - server
+
+networks:
+  co-coder-network:
+    driver: bridge
+
+# Usage:
+# Production mode (built app):
+#   docker-compose up -d
+#   Access at http://localhost:3000
+#
+# Development mode (with hot reload):
+#   1. Comment out the 'app' service above
+#   2. Uncomment the 'server' and 'client' services
+#   3. docker-compose up -d
+#   4. Access at http://localhost:5173
+#
+# Stop:
+#   docker-compose down
+#
+# View logs:
+#   docker-compose logs -f
+#
+# Rebuild:
+#   docker-compose up -d --build
