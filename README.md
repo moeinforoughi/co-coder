@@ -1,14 +1,21 @@
-# Co-Coder 🚀
+# Co-Coder ⚡
 
-A collaborative coding interview platform with real-time editing, syntax highlighting, and browser-based code execution.
+[![CI/CD](https://github.com/yourusername/co-coder/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/yourusername/co-coder/actions/workflows/ci-cd.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
-## Features
+A collaborative coding interview platform with **real-time editing**, **syntax highlighting**, and **browser-based code execution**. Features a stunning **cyber-themed UI** with neon effects and smooth animations.
 
-✨ **Real-time Collaboration** - Multiple users can edit code simultaneously  
-🎨 **Syntax Highlighting** - Support for JavaScript and Python with CodeMirror  
-▶️ **Code Execution** - Run Python and JavaScript code safely in the browser using WASM  
-🔗 **Easy Sharing** - Generate shareable links for instant collaboration  
-🎯 **Modern UI** - Beautiful dark mode interface with glassmorphism effects
+## ✨ Features
+
+⚡ **Real-time Collaboration** - Multiple users can edit code simultaneously with instant synchronization  
+🎨 **Syntax Highlighting** - Advanced highlighting for JavaScript and Python using CodeMirror 6  
+▶️ **Code Execution** - Run Python (via WASM) and JavaScript code safely in the browser  
+🔗 **Easy Sharing** - Generate and share session links instantly  
+🌌 **Cyber Theme** - Stunning cyberpunk-inspired UI with neon colors, glitch effects, and animated grid background  
+🚀 **CI/CD Pipeline** - Automated testing and deployment with GitHub Actions  
+🛡️ **Production Ready** - Rate limiting, error handling, health checks, and monitoring  
+📦 **Docker Support** - Containerized deployment with multi-stage builds
 
 ## Technology Stack
 
@@ -191,10 +198,32 @@ docker run -p 3000:3000 co-coder
 ### Question 7: Deployment
 **Service**: Render.com
 
-## Contributing
+## 📊 CI/CD
 
-Feel free to open issues or submit pull requests!
+Automated pipeline with GitHub Actions:
+- ✅ Automated testing on push and PR
+- 🐳 Docker image builds
+- 🔍 Code quality checks
+- 🚀 Auto-deployment ready
 
-## License
+See [`.github/workflows/ci-cd.yml`](.github/workflows/ci-cd.yml) for details.
 
-MIT
+## 📚 Documentation
+
+- **[Deployment Guide](docs/DEPLOYMENT.md)** - Complete deployment instructions for all platforms
+- **[Contributing Guide](CONTRIBUTING.md)** - How to contribute to the project
+- **[Walkthrough](brain/.../walkthrough.md)** - Detailed implementation walkthrough
+
+## 🤝 Contributing
+
+Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md) for details.
+
+## 📄 License
+
+MIT License - see [LICENSE](LICENSE) file for details
+
+---
+
+<div align="center">
+  <strong>Built with ❤️ for collaborative coding interviews</strong>
+</div>

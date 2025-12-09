@@ -45,9 +45,9 @@ function Home() {
     return (
         <div className="home-container fade-in">
             <div className="home-content">
-                <h1 className="home-title">Co-Coder</h1>
+                <h1 className="home-title">CO-CODER</h1>
                 <p className="home-subtitle">
-                    Collaborative coding interviews made simple
+                    Collaborative Coding // Real-Time Sync
                 </p>
 
                 <div className="home-actions">
@@ -59,19 +59,19 @@ function Home() {
                         {loading ? (
                             <>
                                 <span className="spinner"></span>
-                                Creating Session...
+                                Initializing...
                             </>
                         ) : (
-                            '+ Create New Session'
+                            '⚡ Create New Session'
                         )}
                     </button>
 
                     {sessionLink && (
                         <div className="link-display slide-in">
-                            <div style={{ marginBottom: '0.5rem', fontSize: '0.875rem', color: 'var(--text-secondary)' }}>
-                                Share this link:
+                            <div style={{ marginBottom: '0.5rem', fontSize: '0.875rem', color: 'var(--cyber-neon-cyan)', fontWeight: '700' }}>
+                                &gt; SESSION LINK
                             </div>
-                            <div style={{ marginBottom: '1rem' }}>{sessionLink}</div>
+                            <div style={{ marginBottom: '1rem', fontSize: '0.85rem' }}>{sessionLink}</div>
                             <button className="btn-secondary" onClick={copyToClipboard}>
                                 📋 Copy Link
                             </button>
@@ -83,7 +83,7 @@ function Home() {
                     <div className="input-group">
                         <input
                             type="text"
-                            placeholder="Enter session ID"
+                            placeholder="Enter session ID..."
                             value={joinSessionId}
                             onChange={(e) => setJoinSessionId(e.target.value)}
                             onKeyPress={(e) => e.key === 'Enter' && joinSession()}
@@ -94,10 +94,19 @@ function Home() {
                     </div>
                 </div>
 
-                <div style={{ marginTop: '3rem', color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
-                    <p>✨ Real-time collaboration</p>
-                    <p>🎨 Syntax highlighting for JavaScript & Python</p>
-                    <p>▶️ Execute code in the browser</p>
+                <div className="feature-list">
+                    <div className="feature-item">
+                        <div style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>⚡</div>
+                        <div>Real-time Sync</div>
+                    </div>
+                    <div className="feature-item">
+                        <div style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>🎨</div>
+                        <div>Syntax Highlight</div>
+                    </div>
+                    <div className="feature-item">
+                        <div style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>▶️</div>
+                        <div>Code Execution</div>
+                    </div>
                 </div>
             </div>
         </div>

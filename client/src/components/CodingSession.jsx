@@ -126,16 +126,22 @@ function CodingSession() {
     return (
         <div className="fade-in">
             <div className="header">
-                <div className="logo">Co-Coder</div>
+                <div className="logo">&lt;CO-CODER/&gt;</div>
                 <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-                    <span style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
-                        {connected ? '🟢 Connected' : '🔴 Disconnected'}
+                    <span style={{
+                        color: connected ? 'var(--cyber-neon-green)' : 'var(--cyber-neon-pink)',
+                        fontSize: '0.875rem',
+                        fontWeight: '700',
+                        textTransform: 'uppercase',
+                        textShadow: connected ? 'var(--glow-green)' : 'var(--glow-pink)'
+                    }}>
+                        {connected ? '● CONNECTED' : '● DISCONNECTED'}
                     </span>
                     <button className="btn-secondary" onClick={copySessionLink}>
-                        📋 Copy Link
+                        📋 Copy
                     </button>
                     <button className="btn-secondary" onClick={() => navigate('/')}>
-                        ← Home
+                        ← Exit
                     </button>
                 </div>
             </div>
