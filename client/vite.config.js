@@ -19,5 +19,32 @@ export default defineConfig({
     },
     optimizeDeps: {
         exclude: ['pyodide']
+    },
+    build: {
+        rollupOptions: {
+            external: [
+                // Pyodide tries to import these Node.js modules
+                // but they're not needed in browser builds
+                'node-fetch',
+                'path',
+                'fs',
+                'crypto',
+                'stream',
+                'util',
+                'url',
+                'zlib',
+                'http',
+                'https',
+                'buffer'
+            ],
+            output: {
+                manualChunks: {
+                    'pyodide': ['pyodide']
+                }
+            }
+        },
+        commonjsOptions: {
+            ignoreDynamicRequires: true
+        }
     }
 })
