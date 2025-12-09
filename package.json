@@ -1,0 +1,22 @@
+{
+  "name": "co-coder",
+  "version": "1.0.0",
+  "description": "Collaborative coding interview platform",
+  "main": "index.js",
+  "scripts": {
+    "client": "cd client && npm run dev",
+    "server": "cd server && npm run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "install:all": "npm install && cd client && npm install && cd ../server && npm install",
+    "test": "cd server && npm test && cd ../client && npm test",
+    "build": "cd client && npm run build",
+    "docker:build": "docker build -t co-coder .",
+    "docker:run": "docker run -p 3000:3000 co-coder"
+  },
+  "keywords": ["coding", "interview", "collaboration", "real-time"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
