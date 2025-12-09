@@ -4,16 +4,19 @@ import { app, httpServer } from '../index.js';
 
 describe('Co-Coder Integration Tests', () => {
     let serverPort;
+    let server;
 
     beforeAll((done) => {
         serverPort = 3001; // Use different port for testing
-        httpServer.listen(serverPort, () => {
+        server = httpServer.listen(serverPort, () => {
             done();
         });
     });
 
     afterAll((done) => {
-        httpServer.close(done);
+        server.close(() => {
+            done();
+        });
     });
 
     describe('API Endpoints', () => {
