@@ -177,29 +177,6 @@ docker build -t co-coder .
 docker run -p 3000:3000 co-coder
 ```
 
-## Homework Answers
-
-### Question 1: Initial Implementation
-**Prompt**: "Build a collaborative coding interview platform with React+Vite frontend and Express.js backend. Features: create/share session links, real-time collaborative editing with WebSocket, syntax highlighting for JavaScript and Python, and browser-based code execution using WASM. Use Socket.IO for real-time communication and CodeMirror for the editor."
-
-### Question 2: Integration Tests
-**Command**: `cd server && npm test`
-
-### Question 3: Running Both Client and Server
-**Command in package.json**: `"dev": "concurrently \"npm run server\" \"npm run client\""`
-
-### Question 4: Syntax Highlighting
-**Library**: CodeMirror 6 (`@uiw/react-codemirror`)
-
-### Question 5: Code Execution
-**Library**: Pyodide (Python compiled to WASM)
-
-### Question 6: Containerization
-**Base Image**: `node:18-alpine`
-
-### Question 7: Deployment
-**Service**: Render.com
-
 ## 📊 CI/CD
 
 Automated pipeline with GitHub Actions:
